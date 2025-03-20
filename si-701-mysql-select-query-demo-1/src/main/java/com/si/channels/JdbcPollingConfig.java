@@ -13,11 +13,9 @@ import org.springframework.integration.core.MessageSource;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.Pollers;
 import org.springframework.integration.jdbc.JdbcPollingChannelAdapter;
-import org.springframework.integration.scheduling.PollerMetadata;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
-import org.springframework.scheduling.support.PeriodicTrigger;
 
 @Configuration
 public class JdbcPollingConfig {

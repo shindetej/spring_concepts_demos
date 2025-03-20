@@ -38,12 +38,7 @@ public class FTPIntegrationConfig {
                         .localDirectory(new File("C:\\Users\\shind\\Downloads\\ftp_temp"))  // Local Directory
                         .deleteRemoteFiles(true)  
                         .autoCreateLocalDirectory(true),
-                        e -> e.poller(Pollers.fixedDelay(2000)))
-                .handle((p,h)-> {
-                	System.out.println("Payload : "+p);
-                	System.out.println("Header : "+h);
-                	return p;
-                })
+                        e -> e.poller(Pollers.fixedDelay(10000)))
                 .channel(ftpInputChannel())  // Connect to processing channel
                 .get();
 	}
